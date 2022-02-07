@@ -2,9 +2,17 @@
 $primary-color: #fd9900;
 $secondary-color: #ffebcc;
 $tertiary-color: #fd5400;
+$lighter-primary: #fff5e6;
+$laravel: #fb503b;
+$laravel-secondary: #ffeeeb;
+$react: #61dbfb;
+$react-secondary: #effbff;
+$js: #c0af3f;
+$js-secondary: #fcf8dc;
 $white: #fff;
 $darkGrey: #0d0d0d;
 $lightGrey: #e5e5e5;
+$grey: #6c7375;
 $gradient: linear-gradient(to right, #fd9900, #fd5400);
 $display-size: 4rem;
 $header-size: 3.2rem;
@@ -29,6 +37,9 @@ a:visited,
 a:link {
   color: inherit;
 }
+li {
+  list-style-type: none;
+}
 .display {
   @include font($display-size, 700);
 }
@@ -43,6 +54,26 @@ a:link {
 
 .text-center {
   text-align: center;
+}
+
+.text-react {
+  color: $react;
+  background-color: $react-secondary;
+}
+
+.text-laravel {
+  color: $laravel;
+  background-color: $laravel-secondary;
+}
+
+.text-oop {
+  color: $tertiary-color;
+  background-color: $lighter-primary;
+}
+
+.text-js {
+  color: $js;
+  background-color: $js-secondary;
 }
 
 .input {
@@ -133,7 +164,6 @@ body {
     flex-direction: column;
     align-items: center;
     margin-top: 3.2rem;
-    list-style: none;
     transition: all 0.3s;
   }
 
@@ -339,11 +369,11 @@ body {
     margin-top: 4rem auto 0 auto;
     padding: 2rem;
     scroll-margin-top: 25rem;
+    background-color: $lightGrey;
   }
 
   .latest-works-grid {
     width: 100%;
-    min-height: inherit;
     display: grid;
     grid-template-columns: 1fr;
     margin-top: 4rem;
@@ -352,15 +382,47 @@ body {
 
   .latest-works-grid-item {
     transition: all 0.3s ease;
+    background-color: $white;
+    padding: 1.5rem;
   }
 
   .latest-works-grid-item:hover {
-    transform: scale(1.2);
+    transform: translateY(-2rem);
+  }
+
+  .latest-works-grid-item img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+
+  .latest-works-grid-item .latest-works-tags {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+
+  .latest-works-grid-item .latest-works-tags-item {
+    margin-right: 1rem;
+    padding: 0.5rem 2rem;
+    border-radius: 1.2rem;
+    font-weight: bolder;
+    font-size: 1.1rem;
+  }
+
+  .latest-works-grid-item .project-text {
+    padding: 1rem;
+    color: $grey;
+  }
+
+  .latest-works-grid-item .project-title {
+    font-size: $body-size;
+    font-weight: 500;
   }
 
   .contact {
     width: 100%;
-    margin: 4rem auto;
+    margin: 0 auto;
     padding: 4rem 0;
     scroll-margin-top: 15rem;
     background: $secondary-color;
@@ -552,7 +614,7 @@ body {
     }
 
     .latest-works-grid {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
     }
 
     .contact {
