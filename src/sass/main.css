@@ -393,7 +393,7 @@ body {
   margin-top: 4rem auto 0 auto;
   padding: 2rem;
   scroll-margin-top: 25rem;
-  background-color: #e5e5e5;
+  background-color: #f8f8f8;
 }
 
 .main .latest-works-grid {
@@ -447,8 +447,12 @@ body {
 }
 
 .main .latest-works-grid-item .project-title {
+  font-size: 2rem;
+  color: #0d0d0d;
+}
+
+.main .latest-works-grid-item .project-desc {
   font-size: 1.6rem;
-  font-weight: 500;
 }
 
 .main .contact {

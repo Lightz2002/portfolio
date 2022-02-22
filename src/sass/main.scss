@@ -10,12 +10,14 @@ $react-secondary: #effbff;
 $js: #c0af3f;
 $js-secondary: #fcf8dc;
 $white: #fff;
+$bgGrey: #f8f8f8;
 $darkGrey: #0d0d0d;
 $lightGrey: #e5e5e5;
 $grey: #6c7375;
 $gradient: linear-gradient(to right, #fd9900, #fd5400);
 $display-size: 4rem;
 $header-size: 3.2rem;
+$secondar-header-size: 2rem;
 $body-size: 1.6rem;
 $small-size: 1.2rem;
 
@@ -369,7 +371,7 @@ body {
     margin-top: 4rem auto 0 auto;
     padding: 2rem;
     scroll-margin-top: 25rem;
-    background-color: $lightGrey;
+    background-color: $bgGrey;
   }
 
   .latest-works-grid {
@@ -416,8 +418,12 @@ body {
   }
 
   .latest-works-grid-item .project-title {
+    font-size: $secondar-header-size;
+    color: $darkGrey;
+  }
+
+  .latest-works-grid-item .project-desc {
     font-size: $body-size;
-    font-weight: 500;
   }
 
   .contact {
