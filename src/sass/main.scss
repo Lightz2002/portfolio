@@ -320,7 +320,7 @@ body {
   }
 
   .skills-content-bar::before {
-    @extend .skills-content-bar::after;
+    @extend .skills-content-bar, ::after;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -620,7 +620,7 @@ body {
     }
 
     .latest-works-grid {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
     }
 
     .contact {
